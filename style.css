@@ -1,24 +1,18 @@
 html {
     height: 100%;
 }
-.main {
-    position: relative;
+
+body {
+    overflow-x: hidden;
+    scrollbar-gutter-right:auto;
 }
 
-.main img {
-    width: 100%;
-    height: 700px;
-    object-fit: cover;
-    object-position: top;
-    border: none;
-}
-
-.main .logo {
+.logo {
     position: absolute;
-    top: 12%;
-    left: 13%;
-    width: 75px;
-    height:75px;
+    top: 3vh;
+    left: 3vw;
+    width: 50px;
+    height: 50px;
     border-color: #152E4E;
     border-width: 1.5px;
     background: url(logo.png);
@@ -26,88 +20,91 @@ html {
 }
 
 /*-------------------------------
-------------SIDE NAV-------------
+--------------CIRCLE-------------
 -------------------------------*/
-.main .home {
-    position: absolute;
-    top: 30%;
-    left: 15%;
-    color: #152E4E;
-    font-size: 28px;
-    border: none;
-    border-radius:50%;
-    padding-top: 0.35em;
-    padding-bottom: 0.35em;
-    padding-right: 0.40em;
-    padding-left: 0.43em;
-    align-items: center;
-    justify-content: center;
-    display: block;
-    cursor: pointer;
-    background-color: #fff;
-}
-.main .about {
-    position: absolute;
-    top: 40%;
-    left: 15%;
-    color: #152E4E;
-    font-size: 28px;
-    border: none;
-    border-radius:50%;
-    padding-top: 0.35em;
-    padding-bottom: 0.35em;
-    padding-right: 0.49em;
-    padding-left: 0.51em;
-    align-items: center;
-    justify-content: center;
-    display: block;
-    cursor: pointer;
-    background-color: #fff;
-}
-.main .resume {
-    position: absolute;
-    top: 50%;
-    left: 15%;
-    color: #152E4E;
-    font-size: 22px;
-    border: none;
-    border-radius:50%;
-    padding-top: 0.57em;
-    padding-bottom: 0.57em;
-    padding-right: 0.70em;
-    padding-left: 0.72em;
-    align-items: center;
-    justify-content: center;
-    display: block;
-    cursor: pointer;
-    background-color: #fff;
-}
-
-.main .contact {
-    position: absolute;
-    top: 60%;
-    left: 15%;
-    color: #152E4E;
-    font-size: 26px;
-    border: none;
+.cir {
     border-radius:50%;
     padding-top: 0.45em;
     padding-bottom: 0.35em;
     padding-right: 0.57em;
     padding-left: 0.59em;
+}
+
+/*-------------------------------
+-------------TOP NAV-------------
+-------------------------------*/
+.top-nav {
+    background-color: #152E4E;
+    color: #fff;
+}
+
+.top-nav .home {
+    position: absolute;
+    top: 1vw;
+    right: 32vw;
+    color: #fff;
+    font-family: Montserrat;
+    font-size: min(13px, 1.35vw);
     align-items: center;
     justify-content: center;
     display: block;
     cursor: pointer;
-    background-color: #fff;
+    background-color: transparent;
+    border: none;
 }
+.top-nav .about {
+    position: absolute;
+    top: 1vw;
+    right: 23.5vw;
+    color: #fff;
+    font-family: Montserrat;
+    font-size: min(13px, 1.35vw);
+    align-items: center;
+    justify-content: center;
+    display: block;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+
+}
+.top-nav .resume {
+    position: absolute;
+    top: 1vw;
+    right: 14vw;
+    color: #fff;
+    font-family: Montserrat;
+    font-size: min(13px, 1.35vw);
+    align-items: center;
+    justify-content: center;
+    display: block;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+
+}
+
+.top-nav .contact {
+    position: absolute;
+    top: 1vw;
+    right: 5vw;
+    color: #fff;
+    font-family: Montserrat;
+    font-size: min(13px, 1.35vw);
+    align-items: center;
+    justify-content: center;
+    display: block;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
 
 /*-------------------------------
 -------------RESUME--------------
 -------------------------------*/
 .pdf {
     height: auto;
-    width: 100%;
+    width: 100vw;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -120,7 +117,7 @@ html {
     right: 0;
     top: 0;
     bottom: 0;
-    width: 100%;
+    width: 100vw;
     height: 600px;
     border: none;
 }
@@ -128,10 +125,46 @@ html {
 .tempresume {
     position: absolute;
     right: 0;
-    top: 0;
+    top: 5%;
     bottom: 0;
     width: 100%;
     border: none;
+}
+
+.image {
+    display: inline-block;
+}
+
+.image img {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 650px;
+    object-fit: cover;
+    object-position: top;
+    border: none;
+}
+
+.image svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+svg {
+    height: min(40px, 3.7vw);
+    width: 100vw;
+
+}
+
+rect {
+    height: min(40px, 3.7vw);
+    width: 100vw;
+    x=0;
+    y=0;
+    fill: #152E4E;
+    color: #fff;
 }
 
 /*-------------------------------
@@ -238,16 +271,6 @@ span {
     background: #3163a5;
 }
 
-.abtbck .dropdown .menu {
-    position: absolute;
-    top: 3vw;
-    left: 3%;
-}
-
-.abtbck .dropdown .dd-content {
-    top: 8.1vw;
-    left: 3%;
-}
 
 /*-------------------------------
 -------------GENERAL-------------
@@ -269,27 +292,38 @@ img {
 /*-------------------------------
 -----------SCROLLBAR------------
 -------------------------------*/
-
 /* width */
 ::-webkit-scrollbar {
-  width: 8px;
+    width: 8px;
+    overflow-y: overlay;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: transparent;
+    background: transparent;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #152E4E;
-  opacity: 0.7;
-  border-radius: 4px;
+    background: #152E4E;
+    opacity: 0.7;
+    border-radius: 4px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: transparent;
+    background: transparent;
 }
+
+::-webkit-scrollbar-track-piece:start {
+    background: transparent;
+}
+
+::-webkit-scrollbar-track-piece:end {
+    background: transparent;
+}
+
+
+
 
 

@@ -4,7 +4,7 @@ html {
 
 body {
     overflow-x: hidden;
-    scrollbar-gutter-right:auto;
+    overflow:overlay;
 }
 
 .logo {
@@ -16,7 +16,8 @@ body {
     border-color: #152E4E;
     border-width: 1.5px;
     background: url(logo.png);
-    background-size: 100%
+    background-size: 100%;
+    z-index: 2;
 }
 
 /*-------------------------------
@@ -51,7 +52,9 @@ body {
     cursor: pointer;
     background-color: transparent;
     border: none;
+    z-index: 2;
 }
+
 .top-nav .about {
     position: absolute;
     top: 1vw;
@@ -65,8 +68,9 @@ body {
     cursor: pointer;
     background-color: transparent;
     border: none;
-
+    z-index: 2;
 }
+
 .top-nav .resume {
     position: absolute;
     top: 1vw;
@@ -80,13 +84,13 @@ body {
     cursor: pointer;
     background-color: transparent;
     border: none;
-
+    z-index: 2;
 }
 
 .top-nav .contact {
     position: absolute;
     top: 1vw;
-    right: 5vw;
+    right: 4.5vw;
     color: #fff;
     font-family: Montserrat;
     font-size: min(13px, 1.35vw);
@@ -96,8 +100,27 @@ body {
     cursor: pointer;
     background-color: transparent;
     border: none;
+    z-index: 2;
 }
 
+/*-------------------------------
+--------------HOME---------------
+-------------------------------*/
+.myname {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text {
+    position: absolute;
+    font-family: Montserrat;
+    color: #fff;
+    font-weight: 300;
+    font-size: max(25px, 3.5vw);
+    z-index: 2;
+}
 
 /*-------------------------------
 -------------RESUME--------------
@@ -109,7 +132,6 @@ body {
     top: 0;
     bottom: 0;
     right: 0;
-
 }
 
 .pdf iframe {
@@ -144,18 +166,16 @@ body {
     object-fit: cover;
     object-position: top;
     border: none;
+    z-index: 0;
 }
 
-.image svg {
+.top-nav svg {
     position: absolute;
     left: 0;
     top: 0;
-}
-
-svg {
+    z-index: 1;
     height: min(40px, 3.7vw);
     width: 100vw;
-
 }
 
 rect {
@@ -165,6 +185,7 @@ rect {
     y=0;
     fill: #152E4E;
     color: #fff;
+    opacity: 90%;
 }
 
 /*-------------------------------
@@ -228,14 +249,16 @@ rect {
 -------------------------------*/
 span {
     position: absolute;
-    top: 9.2vw;
+    top: 12.2vw;
     left: 8%;
     font-family: Montserrat;
     font-weight: 300;
     font-size: max(50px, 5vw);
     color: #fff;
-    border-bottom: .25vw solid #97b8cc;
+    border-bottom: .25vw solid #3163a5;
+    border-bottom: .25vw solid rgba(49, 99, 165, .6);
     padding-bottom: .75vw;
+    z-index: 2;
 }
 
 /*-------------------------------
@@ -243,34 +266,89 @@ span {
 -------------------------------*/
 .descMe {
     position: absolute;
-    top: 22.2vw;
+    top: 24.2vw;
     left: 8%;
     right: 50%;
     font-family: Montserrat;
     color: #fff;
     font-weight: 400;
     font-size: max(18px, 1.5vw);
+    z-index: 2; 
+}
+
+.abtbck .image img {
+    filter: brightness(40%);
+    object-position: center;
 }
 
 /*-------------------------------
------------ABOUT IMAGE-----------
+-------------CONTACT-------------
 -------------------------------*/
-.aboutme img {
-    width: 45vh;
-    height: auto;
-    object-fit: contain;
+.contact-info .image img {
+    filter: brightness(40%);
+    object-position: top;
+}
+
+.contact-info span {
+    left: 50%;
+}
+
+.container {
+    position: absolute;
+    top: 24.3vw;
+    left: 50%;
+    width: 44vw;
+    height: 50vw;
+    background-color: #000000D9;
+    filter: brightness(100%);
+}
+
+/* Full-width input fields */
+input[type=text] {
+    height: max(18px, 1.5vw);
+    margin-left: 3vw;
+    padding: 1vw;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    width: 80%;
+    font-family: Montserrat;
+    font-weight: 700;
+    border-top-color: none;
+    border-left-color: none;
+    border-right-color: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom-color: #fff;
+    border-bottom-width: .2vw;
+    background: transparent;
+    color: #fff;
+}
+
+input[type=text]:focus {
+    color: #fff;
+    outline: none;
+}
+
+.btn {
+    position: absolute;
+    display: block;
+    margin: 0 auto;
+    background-color: #152E4E;
+    font-family: Montserrat;
+    font-weight: 500;
+    color: white;
+    padding: 8px 10px;
+    top: 40vw;
     border: none;
-    margin-left: 53%;
-    margin-top: 10%;
+    cursor: pointer;
+    width: 90px;
+    opacity: 0.8;
 }
 
-/*-------------------------------
---------------ABOUT--------------
--------------------------------*/
-.abtbck {
-    background: #3163a5;
+.btn:hover {
+  opacity: 1;
 }
-
 
 /*-------------------------------
 -------------GENERAL-------------
@@ -305,12 +383,11 @@ img {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #152E4E;
-    opacity: 0.7;
+    background-color: #152E4EBF;
     border-radius: 4px;
 }
 
-/* Handle on hover */
+/* Handle on hover 
 ::-webkit-scrollbar-thumb:hover {
     background: transparent;
 }
@@ -324,6 +401,22 @@ img {
 }
 
 
+.on-scrollbar::-webkit-scrollbar-track {
+  -webkit-box-shadow: none;
+  background-color: transparent;
+}
+
+.on-scrollbar::-webkit-scrollbar {
+  width: 8px;
+  background-color: transparent;
+  overflow-y: overlay;
+}
+
+.on-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #000;
+  z-index: 2;
+}
+*/
 
 
 

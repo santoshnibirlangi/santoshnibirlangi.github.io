@@ -250,7 +250,6 @@ rect {
 span {
     position: absolute;
     top: 12.2vw;
-    left: 8%;
     font-family: Montserrat;
     font-weight: 300;
     font-size: max(50px, 5vw);
@@ -276,6 +275,10 @@ span {
     z-index: 2; 
 }
 
+.abtbck span {
+    left: 8%;
+} 
+
 .abtbck .image img {
     filter: brightness(40%);
     object-position: center;
@@ -290,25 +293,29 @@ span {
 }
 
 .contact-info span {
-    left: 50%;
+    top: min(12.2vw, 12.2vh);
+    text-align: right;
+    right: 7%;
+    border-bottom-length: max(50px, 5vw);
 }
 
 .container {
     position: absolute;
-    top: 24.3vw;
-    left: 50%;
-    width: 44vw;
-    height: 50vw;
+    top: max(24vh, 14.5vw);
+    right: 5%;
+    bottom: 3%;
+    text-align: right;
+    width: max(50vw, 50vh);
+    max-height: 425px;
     background-color: #000000D9;
     filter: brightness(100%);
 }
 
 /* Full-width input fields */
 input[type=text] {
-    height: max(18px, 1.5vw);
-    margin-left: 3vw;
-    padding: 1vw;
-    padding-top: 2vw;
+    height: max(70px, 1.4vw);
+    margin-right: max(4vw, 45px);
+    padding-top: min(6vh, 4.7vw);
     padding-bottom: 2vw;
     width: 80%;
     font-family: Montserrat;
@@ -322,6 +329,7 @@ input[type=text] {
     border-bottom-color: #fff;
     border-bottom-width: .2vw;
     background: transparent;
+    box-sizing: border-box;
     color: #fff;
 }
 
@@ -330,24 +338,101 @@ input[type=text]:focus {
     outline: none;
 }
 
+textarea {
+    height: min(20vh, 15vw);
+    max-height: 110px;
+    margin-right: max(4vw, 45px);
+    padding-bottom: 2vw;
+    width: 80%;
+    font-family: Montserrat;
+    font-weight: 700;
+    border-color: #fff;
+    border-width: .2vw;
+    background: transparent;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: ew-resize;
+}
+
+.resize {
+    padding-top: max(4vh,3vw);
+    padding-bottom: max(4vh,1.8vw);
+}
+
 .btn {
     position: absolute;
-    display: block;
-    margin: 0 auto;
+    width:100%;
+    display:block;
     background-color: #152E4E;
     font-family: Montserrat;
     font-weight: 500;
-    color: white;
-    padding: 8px 10px;
-    top: 40vw;
+    color: #fff;
     border: none;
     cursor: pointer;
-    width: 90px;
-    opacity: 0.8;
+    opacity: .8;
+    transition: 0.3s;
 }
 
 .btn:hover {
   opacity: 1;
+}
+
+/*-------------------------------
+-------------FOOTER--------------
+-------------------------------*/
+.footer .social-footer-icons .lnkdin {
+    position: absolute;
+    bottom: 1.8vh;
+    right: 15vw;
+    color: #152E4E;
+    font-family: Montserrat;
+    font-size: 22px;
+    align-items: center;
+    justify-content: center;
+    display: block;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    text-align: center;
+    opacity: .6;
+    transition: 0.1s;
+}
+
+.footer .social-footer-icons .insta {
+    position: absolute;
+    bottom: 1.8vh;
+    right: 7vw;
+    color: #152E4E;
+    font-family: Montserrat;
+    font-size: 22px;
+    align-items: center;
+    justify-content: center;
+    display: block;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    text-align: center;
+    opacity:.6;
+    transition: 0.1s;
+}
+
+.social-footer .social-footer-icons .insta:hover {
+    opacity: 1;
+}
+
+.social-footer .social-footer-icons .lnkdin:hover {
+    opacity: 1;    
+}
+
+.footer .madeby {
+    position: absolute;
+    left: 1vw;
+    bottom: 2vh;
+    background-color: #fff;
+    color: #152E4E;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: max(14px, .95vw);
 }
 
 /*-------------------------------

@@ -21,10 +21,10 @@
     <a href="index.html"><button class="logo"></button></a>
     <div class="top-nav">
         <svg><rect/></svg>
-        <a href="index.html"><button class="home">HOME</i></button></a>
-        <a href="about.html"><button class="about">ABOUT</i></button></a>
-        <a href="tempresume.html"><button class="resume">RESUME</i></button></a>
-        <a href="contact.html"><button class="contact">CONTACT</i></button></a>
+        <a href="index.html"><button class="home">HOME</button></a>
+        <a href="about.html"><button class="about">ABOUT</button></a>
+        <a href="tempresume.html"><button class="resume">RESUME</button></a>
+        <a href="contact.html"><button class="contact">CONTACT</button></a>
     </div>   
     <div class="contact-info">
         <span>CONTACT ME</span>
@@ -34,20 +34,26 @@
 
         <div class="forms">
           <form action="contact.php" class="container">
-            <label for="name"><b>Name</b></label>
             <input type="text" placeholder="Enter Name" name="name" required>
 
-            <label for="email"><b>Email</b></label>
             <input type="text" placeholder="Enter Email" name="email" required>
 
-            <label for="sub"><b>Subject</b></label>
             <input type="text" placeholder="Enter Subject" name="sub" required>
 
-            <label for="msg"><b>Message</b></label>
-            <input type="text" placeholder="Enter Message" name="msg" required>
+            <div class="resize">
+                <textarea type="text" placeholder="Enter Message" name="msg" required></textarea>
+            </div>
 
-            <button type="submit" class="btn">SUBMIT</button>
+            <button type="submit" class="btn"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
           </form>
+        </div>
+
+        <div class="footer">
+            <div class="social-footer-icons">
+                    <a href="https://www.linkedin.com/in/santoshni-birlangi/"><button class="lnkdin"><i class="fa fa-linkedin" aria-hidden="true"></i></button></a>
+                    <a href="https://www.instagram.com/santoshni.birlangi/"><button class="insta"><i class="fa fa-instagram" aria-hidden="true"></i></button></a>
+            </div>
+            <div class="madeby">Made by Santoshni Birlangi.</div>
         </div>
 
     <!-- Template Main JS File -->

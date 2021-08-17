@@ -330,13 +330,35 @@ input[type=text] {
     border-bottom-width: .2vw;
     background: transparent;
     box-sizing: border-box;
+    outline: none;
     color: #fff;
 }
 
-input[type=text]:focus {
-    color: #fff;
+
+
+input[type=email] {
+    height: max(70px, 1.4vw);
+    margin-right: max(4vw, 45px);
+    padding-top: min(6vh, 4.7vw);
+    padding-bottom: 2vw;
+    width: 80%;
+    font-family: Montserrat;
+    font-weight: 700;
+    border-top-color: none;
+    border-left-color: none;
+    border-right-color: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom-color: #fff;
+    border-bottom-width: .2vw;
+    background: transparent;
+    box-sizing: border-box;
     outline: none;
+    color: #fff;
 }
+
+
 
 textarea {
     height: min(20vh, 15vw);
@@ -350,6 +372,7 @@ textarea {
     border-width: .2vw;
     background: transparent;
     box-sizing: border-box;
+    outline: none;
     color: #fff;
     cursor: ew-resize;
 }

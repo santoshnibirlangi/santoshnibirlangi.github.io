@@ -32,6 +32,62 @@ body {
 }
 
 /*-------------------------------
+---------DROPDOWN MENU-----------
+-------------------------------*/
+.menu {
+    position: absolute;
+    top: 4.22313vw;
+    left: 6%;
+    color: #3163a5;
+    font-size: 3.95vw;
+    font-family: Montserrat;
+    border: none;
+    background-color: #fff;
+}
+
+.dd-content {
+    display: none;
+    position: absolute;
+    top: 8.7vw;
+    left: 6%;
+    background-color: #152E4E;
+    font-family: Montserrat;
+    font-size: 1.3vw;
+    width: 20vw;
+    height: 16.7vw;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dd-content a {
+    top: 5.2vw;
+    left: 6%;
+    color: #fff;
+    font-weight: 500;
+    padding: 2vw 2vw;
+    text-decoration: none;
+}
+
+.dd-content a:hover {
+    background-color: #fff;
+    color: #3163a5;
+}
+
+.dropdown:hover .dd-content {
+    display: block;
+}
+
+.dropdown:hover .menu {
+    background-color:#152E4E;
+    color: #fff;
+    border-top: #fff;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    border-width: 3px;
+}
+
+/*-------------------------------
 -------------TOP NAV-------------
 -------------------------------*/
 .top-nav {
@@ -106,154 +162,21 @@ body {
 /*-------------------------------
 --------------HOME---------------
 -------------------------------*/
-.myname {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.text {
+.myname .text {
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-family: Montserrat;
+    text-align: center;
     color: #fff;
     font-weight: 300;
     font-size: max(25px, 3.5vw);
     z-index: 2;
 }
 
-.bg-image img {
-    position: fixed;
-    right: 0;
-    top: 0;
-    width: 100%;
-    height: 650px;
-    object-fit: cover;
-    object-position: 0% 30%;
-    border: none;
-    z-index: 0;
-}
-
-/*-------------------------------
--------------RESUME--------------
--------------------------------*/
-.pdf {
-    height: auto;
-    width: 100vw;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-}
-
-.pdf iframe {
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 100vw;
-    height: 600px;
-    border: none;
-}
-
-.tempresume {
-    position: absolute;
-    right: 0;
-    top: 5%;
-    bottom: 0;
-    width: 100%;
-    border: none;
-}
-
-.image {
-    display: inline-block;
-}
-
-.image img {
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 100%;
-    height: 650px;
-    object-fit: cover;
-    object-position: top;
-    border: none;
-    z-index: 0;
-}
-
-.top-nav svg {
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 1;
-    height: min(40px, 3.7vw);
-    width: 100vw;
-}
-
-rect {
-    height: min(40px, 3.7vw);
-    width: 100vw;
-    x=0;
-    y=0;
-    fill: #152E4E;
-    color: #fff;
-    opacity: 90%;
-}
-
-/*-------------------------------
----------DROPDOWN MENU-----------
--------------------------------*/
-.menu {
-    position: absolute;
-    top: 4.22313vw;
-    left: 6%;
-    color: #3163a5;
-    font-size: 3.95vw;
-    font-family: Montserrat;
-    border: none;
-    background-color: #fff;
-}
-
-.dd-content {
-    display: none;
-    position: absolute;
-    top: 8.7vw;
-    left: 6%;
-    background-color: #152E4E;
-    font-family: Montserrat;
-    font-size: 1.3vw;
-    width: 20vw;
-    height: 16.7vw;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-.dd-content a {
-    top: 5.2vw;
-    left: 6%;
-    color: #fff;
-    font-weight: 500;
-    padding: 2vw 2vw;
-    text-decoration: none;
-}
-
-.dd-content a:hover {
-    background-color: #fff;
-    color: #3163a5;
-}
-
-.dropdown:hover .dd-content {
-    display: block;
-}
-
-.dropdown:hover .menu {
-    background-color:#152E4E;
-    color: #fff;
-    border-top: #fff;
-    border-left: none;
-    border-right: none;
-    border-bottom: none;
-    border-width: 3px;
+.myname .image img {
+    object-position: 50% 30%;
 }
 
 /*-------------------------------
@@ -293,7 +216,98 @@ span {
 
 .abtbck .image img {
     filter: brightness(40%);
-    object-position: 70% 40%;
+    object-position: 50% 40%;
+}
+
+/*-------------------------------
+-------------RESUME--------------
+-------------------------------*/
+.tempresume {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
+    width: min(800px, 100%);
+}
+
+.image {
+    display: inline-block;
+}
+
+.image img {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 650px;
+    object-fit: cover;
+    object-position: top;
+    border: none;
+    z-index: 0;
+}
+
+.top-nav svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    height: min(40px, 3.7vw);
+    width: 100vw;
+}
+
+rect {
+    height: min(40px, 3.7vw);
+    width: 100vw;
+    x=0;
+    y=0;
+    fill: #152E4E;
+    color: #fff;
+    opacity: 90%;
+}
+
+.modfooter .social-footer-icons .lnkdin {
+    position: absolute;
+    right: 15vw;
+    color: #152E4E;
+    font-family: Montserrat;
+    font-size: 22px;
+    align-items: center;
+    justify-content: center;
+    display: block;
+    cursor: pointer;
+    background-color: #fff;
+    border: none;
+    text-align: center;
+    transition: 0.1s;
+    padding-bottom: 1vw;
+}
+
+.modfooter .social-footer-icons .insta {
+    position: absolute;
+    right: 7vw;
+    color: #152E4E;
+    font-family: Montserrat;
+    font-size: 22px;
+    align-items: center;
+    justify-content: center;
+    display: block;
+    cursor: pointer;
+    background-color: #fff;
+    border: none;
+    text-align: center;
+    transition: 0.1s;
+    padding-bottom: 1vw;
+}
+
+.modfooter .madeby {
+    position: absolute;
+    left: 1vw;
+    background-color: #fff;
+    color: #152E4E;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: max(14px, .95vw);
+    padding-bottom: 1vw;
 }
 
 /*-------------------------------
@@ -301,7 +315,7 @@ span {
 -------------------------------*/
 .contact-info .image img {
     filter: brightness(40%);
-    object-position: 0% 55%;
+    object-position: 50% 0%;
 }
 
 .contact-info span {
@@ -346,8 +360,6 @@ input[type=text] {
     color: #fff;
 }
 
-
-
 input[type=email] {
     height: max(70px, 1.4vw);
     margin-right: max(4vw, 45px);
@@ -369,8 +381,6 @@ input[type=email] {
     outline: none;
     color: #fff;
 }
-
-
 
 textarea {
     height: min(20vh, 15vw);
@@ -426,10 +436,9 @@ textarea {
     justify-content: center;
     display: block;
     cursor: pointer;
-    background-color: transparent;
+    background-color: #fff;
     border: none;
     text-align: center;
-    opacity: .6;
     transition: 0.1s;
 }
 
@@ -444,19 +453,10 @@ textarea {
     justify-content: center;
     display: block;
     cursor: pointer;
-    background-color: transparent;
+    background-color: #fff;
     border: none;
     text-align: center;
-    opacity:.6;
     transition: 0.1s;
-}
-
-.social-footer .social-footer-icons .insta:hover {
-    opacity: 1;
-}
-
-.social-footer .social-footer-icons .lnkdin:hover {
-    opacity: 1;    
 }
 
 .footer .madeby {
@@ -473,8 +473,13 @@ textarea {
 /*-------------------------------
 -------------GENERAL-------------
 -------------------------------*/
+button {
+    opacity: .8;
+}
+
 button:hover {
     cursor: pointer;
+    opacity: 1;
 }
 
 a {
@@ -487,6 +492,12 @@ img {
     height: auto;
 }
 
+hr {
+    width: 100%;
+    size: 1vh;
+    margin-bottom: 6vh;
+    color: #152E4E;
+}
 /*-------------------------------
 -----------SCROLLBAR------------
 -------------------------------*/

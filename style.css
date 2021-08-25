@@ -130,7 +130,7 @@ body {
 .top-nav .resume {
     position: absolute;
     top: 1vw;
-    right: 22.5vw;
+    right: 23vw;
     color: #fff;
     font-family: Montserrat;
     font-size: min(13px, 1.35vw);
@@ -255,7 +255,7 @@ span {
     right: 0;
     top: 0;
     width: 100%;
-    height: 650px;
+    height: 90vh;
     object-fit: cover;
     object-position: top;
     border: none;
@@ -347,10 +347,11 @@ rect {
     right: 5%;
     bottom: 3%;
     text-align: right;
-    width: max(50vw, 50vh);
-    max-height: 425px;
+    width: max(40vw, 50vh);
+    height: 50vh;
     background-color: #000000D9;
     filter: brightness(100%);
+    padding-bottom: 2vw;
 }
 
 /* Full-width input fields */
@@ -399,10 +400,9 @@ input[type=email] {
 }
 
 textarea {
-    height: min(20vh, 15vw);
-    max-height: 110px;
+    height:13vh;
     margin-right: max(4vw, 45px);
-    padding-bottom: 2vw;
+    padding-bottom: 3vw;
     width: 80%;
     font-family: Montserrat;
     font-weight: 700;
@@ -422,6 +422,7 @@ textarea {
 
 .btn {
     position: absolute;
+    bottom: -3vh;
     width:100%;
     display:block;
     background-color: #152E4E;

@@ -98,7 +98,7 @@ body {
 .top-nav .home {
     position: absolute;
     top: 1vw;
-    right: 32vw;
+    right: 39vw;
     color: #fff;
     font-family: Montserrat;
     font-size: min(13px, 1.35vw);
@@ -114,7 +114,7 @@ body {
 .top-nav .about {
     position: absolute;
     top: 1vw;
-    right: 23.5vw;
+    right: 31vw;
     color: #fff;
     font-family: Montserrat;
     font-size: min(13px, 1.35vw);
@@ -130,7 +130,23 @@ body {
 .top-nav .resume {
     position: absolute;
     top: 1vw;
-    right: 14vw;
+    right: 22.5vw;
+    color: #fff;
+    font-family: Montserrat;
+    font-size: min(13px, 1.35vw);
+    align-items: center;
+    justify-content: center;
+    display: block;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    z-index: 2;
+}
+
+.top-nav .insta {
+    position: absolute;
+    top: 1vw;
+    right: 13vw;
     color: #fff;
     font-family: Montserrat;
     font-size: min(13px, 1.35vw);
@@ -497,6 +513,14 @@ hr {
     size: 1vh;
     margin-bottom: 6vh;
     color: #152E4E;
+}
+
+.insta hr {
+    width: 100%;
+    size: 1vh;
+    margin-bottom: 6vh;
+    color: #152E4E;
+    opacity: 0;
 }
 /*-------------------------------
 -----------SCROLLBAR------------

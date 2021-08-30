@@ -232,13 +232,13 @@ span {
 
 .abtbck .image img {
     filter: brightness(40%);
-    object-position: 50% 40%;
+    object-position: 50% 25%;
 }
 
 /*-------------------------------
 -------------RESUME--------------
 -------------------------------*/
-.tempresume {
+.resumebck {
     display: block;
     margin-left: auto;
     margin-right: auto;

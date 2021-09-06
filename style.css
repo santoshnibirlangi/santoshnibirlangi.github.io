@@ -331,7 +331,7 @@ rect {
 -------------------------------*/
 .contact-info .image img {
     filter: brightness(40%);
-    object-position: 50% 0%;
+    object-position: 50% 30%;
 }
 
 .contact-info span {

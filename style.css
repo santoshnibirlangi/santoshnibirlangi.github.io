@@ -86,6 +86,24 @@ body {
     border-bottom: none;
     border-width: 3px;
 }
+/*-------------------------------
+-----------BACKGROUNDS-----------
+-------------------------------*/
+.image {
+    display: inline-block;
+}
+
+.image img {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 93vh;
+    object-fit: cover;
+    object-position: top;
+    border: none;
+    z-index: 0;
+}
 
 /*-------------------------------
 -------------TOP NAV-------------
@@ -98,7 +116,7 @@ body {
 .top-nav .home {
     position: absolute;
     top: 1vw;
-    right: 39vw;
+    right: 41vw;
     color: #fff;
     font-family: Montserrat;
     font-size: min(13px, 1.35vw);
@@ -111,10 +129,10 @@ body {
     z-index: 2;
 }
 
-.top-nav .about {
+.top-nav .project {
     position: absolute;
     top: 1vw;
-    right: 31vw;
+    right: 31.5vw;
     color: #fff;
     font-family: Montserrat;
     font-size: min(13px, 1.35vw);
@@ -130,7 +148,7 @@ body {
 .top-nav .resume {
     position: absolute;
     top: 1vw;
-    right: 23vw;
+    right: 22.9vw;
     color: #fff;
     font-family: Montserrat;
     font-size: min(13px, 1.35vw);
@@ -146,7 +164,7 @@ body {
 .top-nav .insta {
     position: absolute;
     top: 1vw;
-    right: 13vw;
+    right: 12.5vw;
     color: #fff;
     font-family: Montserrat;
     font-size: min(13px, 1.35vw);
@@ -159,7 +177,7 @@ body {
     z-index: 2;
 }
 
-.top-nav .contact {
+.top-nav .service {
     position: absolute;
     top: 1vw;
     right: 4.5vw;
@@ -192,6 +210,7 @@ body {
 }
 
 .myname .image img {
+    filter: brightness(90%);
     object-position: 50% 30%;
 }
 
@@ -203,7 +222,7 @@ span {
     top: 12.2vw;
     font-family: Montserrat;
     font-weight: 300;
-    font-size: max(50px, 5vw);
+    font-size: max(45px, 4.5vw);
     color: #fff;
     border-bottom: .25vw solid #3163a5;
     border-bottom: .25vw solid rgba(49, 99, 165, .6);
@@ -222,12 +241,15 @@ span {
     font-family: Montserrat;
     color: #fff;
     font-weight: 400;
-    font-size: max(18px, 1.5vw);
+    font-size: max(14px, 1.2vw);
     z-index: 2; 
 }
 
 .abtbck span {
+    top: min(12.2vw, 12.2vh);
+    text-align: right;
     left: 8%;
+    border-bottom-length: max(50px, 5vw);
 } 
 
 .abtbck .image img {
@@ -236,32 +258,76 @@ span {
 }
 
 /*-------------------------------
+-------------PROJECT-------------
+-------------------------------*/
+.projbck span {
+    top: min(12.2vw, 12.2vh);
+    text-align: right;
+    left: 8%;
+    border-bottom-length: max(50px, 5vw);
+} 
+
+.projbck .image img {
+    filter: brightness(40%);
+    object-position: 50% 25%;
+}
+
+.howdyhack {
+    position: absolute;
+    top: min(25vw, 29vh);
+    left: 8%;
+    right: 50%;
+    font-family: Montserrat;
+    color: #fff;
+    font-weight: 400;
+    font-size: max(12px, 1.2vw);
+    z-index: 2; 
+}
+
+.tamuhack {
+    position: absolute;
+    top: min(62.5vw, 50vh);
+    left: 8%;
+    right: 50%;
+    font-family: Montserrat;
+    color: #fff;
+    font-weight: 400;
+    font-size: max(12px, 1.2vw);
+    z-index: 2; 
+}
+
+.spacecraft {
+    position: absolute;
+    top: min(105vw, 75vh); 
+    left: 8%;
+    right: 50%;
+    font-family: Montserrat;
+    color: #fff;
+    font-weight: 400;
+    font-size: max(12px, 1.2vw);
+    z-index: 2; 
+}
+
+.projbck .devpst {
+    position: absolute;
+    bottom: 1.5vh;
+    right: -3.5vw;
+    color: #152E4E;
+    font-family: Montserrat;
+    font-size: 18px;
+    align-items: center;
+    justify-content: center;
+    display: block;
+    cursor: pointer;
+    background-color: none;
+    border: none;
+    text-align: center;
+    transition: 0.1s;
+}
+
+/*-------------------------------
 -------------RESUME--------------
 -------------------------------*/
-.resumebck {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 3%;
-    width: min(800px, 100%);
-}
-
-.image {
-    display: inline-block;
-}
-
-.image img {
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 100%;
-    height: 90vh;
-    object-fit: cover;
-    object-position: top;
-    border: none;
-    z-index: 0;
-}
-
 .top-nav svg {
     position: absolute;
     left: 0;
@@ -281,49 +347,172 @@ rect {
     opacity: 90%;
 }
 
-.modfooter .social-footer-icons .lnkdin {
+.resume span {
+    top: min(12.2vw, 12.2vh);
+    text-align: right;
+    right: 7%;
+    border-bottom-length: max(50px, 5vw);
+} 
+
+.resume .image img {
+    filter: brightness(40%);
+    object-position: 50% 25%;
+}
+
+.iframe-parent {
+    width: 50vw;
+    height: min(75vw, 65.5vh);
+    position: relative;
+    top: 20vh;
+    z-index: 2;
+}
+
+/* Expand to the entire container */
+iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    background-color: transparent;
+    z-index: 2;
+}
+
+.resume-text {
+    position: relative;
+    top: min(23vw, 26vh);
+    width: max(45vw, 20vh);
+    height: 64vh;
+    font-family: Montserrat;
+    color: #fff;
+    font-weight: 400;
+    font-size: max(12px, 1.2vw);
+    float: right;
+    display: inline; 
+    overflow-y: scroll;
+    z-index: 2;
+}
+  
+.resume a {
+    display: inline-block;
+}
+/* unvisited link */
+.resume a:link {
+  color: #fff;
+}
+
+/* visited link */
+.resume a:visited {
+  color: #fff;
+}
+
+/* mouse over link */
+.resume a:hover {
+  cursor: pointer;
+}
+
+/*-------------------------------
+--------------INSTA--------------
+-------------------------------*/
+.insta hr {
+    width: 100%;
+    size: 1vh;
+    margin-bottom: 6vh;
+    color: #152E4E;
+    opacity: 0;
+}
+
+/*-------------------------------
+-------------SERVICE-------------
+-------------------------------*/
+.servbck .image img {
+    filter: brightness(40%);
+    object-position: 50% 40%;
+}
+
+.servbck span {
+    top: min(12.2vw, 12.2vh);
+    text-align: right;
+    right: 7%;
+    border-bottom-length: max(50px, 5vw);
+}
+/*.suits {
     position: absolute;
-    right: 15vw;
+    top: min(25vw, 29vh);
+    left:50%;
+    right: 7%;
+    font-family: Montserrat;
+    color: #fff;
+    font-weight: 400;
+    font-size: max(12px, 1.2vw);
+    z-index: 2; 
+}*/
+
+.bodypos {
+    position: absolute;
+    top: min(25vw, 29vh);
+    left:50%;
+    right: 7%;
+    font-family: Montserrat;
+    color: #fff;
+    font-weight: 400;
+    font-size: max(12px, 1.2vw);
+    z-index: 2; 
+}
+.servbck .dtcc .image img {
+    height: 23vh;
+    width: 43vw;
+    object-position: center;
+    position: relative;
+    display: inline-block;
+    filter: brightness(100%);
+    z-index: 2;
+}
+
+.sewa {
+    position: absolute;
+    top: min(105vw, 75vh); 
+    left: 50%;
+    right: 7%;
+    font-family: Montserrat;
+    color: #fff;
+    font-weight: 400;
+    font-size: max(12px, 1.2vw);
+    z-index: 2; 
+}
+
+.servbck .link {
+    position: absolute;
+    bottom: 22.5vh;
+    right: -4vw;
     color: #152E4E;
     font-family: Montserrat;
-    font-size: 22px;
+    font-size: 18px;
     align-items: center;
     justify-content: center;
     display: block;
     cursor: pointer;
-    background-color: #fff;
+    background-color: none;
     border: none;
     text-align: center;
     transition: 0.1s;
-    padding-bottom: 1vw;
 }
 
-.modfooter .social-footer-icons .insta {
-    position: absolute;
-    right: 7vw;
-    color: #152E4E;
-    font-family: Montserrat;
-    font-size: 22px;
-    align-items: center;
-    justify-content: center;
-    display: block;
-    cursor: pointer;
-    background-color: #fff;
-    border: none;
-    text-align: center;
-    transition: 0.1s;
-    padding-bottom: 1vw;
+.servbck a {
+    display: inline-block;
 }
 
-.modfooter .madeby {
-    position: absolute;
-    left: 1vw;
-    background-color: #fff;
-    color: #152E4E;
-    text-align: center;
-    font-family: Montserrat;
-    font-size: max(14px, .95vw);
-    padding-bottom: 1vw;
+/* unvisited link */
+.servbck a  {
+  color: #fff;
+}
+
+/* visited link */
+.servbck a:visited {
+  color: #fff;
+}
+
+/* mouse over link */
+.servbck a:hover {
+  cursor: pointer;
 }
 
 /*-------------------------------
@@ -331,7 +520,7 @@ rect {
 -------------------------------*/
 .contact-info .image img {
     filter: brightness(40%);
-    object-position: 50% 30%;
+    object-position: 50% 40%;
 }
 
 .contact-info span {
@@ -442,23 +631,6 @@ textarea {
 /*-------------------------------
 -------------FOOTER--------------
 -------------------------------*/
-.footer .social-footer-icons .lnkdin {
-    position: absolute;
-    bottom: 1.8vh;
-    right: 15vw;
-    color: #152E4E;
-    font-family: Montserrat;
-    font-size: 22px;
-    align-items: center;
-    justify-content: center;
-    display: block;
-    cursor: pointer;
-    background-color: #fff;
-    border: none;
-    text-align: center;
-    transition: 0.1s;
-}
-
 .footer .social-footer-icons .insta {
     position: absolute;
     bottom: 1.8vh;
@@ -476,6 +648,58 @@ textarea {
     transition: 0.1s;
 }
 
+.footer .social-footer-icons .lnkdin {
+    position: absolute;
+    bottom: 1.8vh;
+    right: 15vw;
+    color: #152E4E;
+    font-family: Montserrat;
+    font-size: 22px;
+    align-items: center;
+    justify-content: center;
+    display: block;
+    cursor: pointer;
+    background-color: #fff;
+    border: none;
+    text-align: center;
+    transition: 0.1s;
+}
+
+.footer .social-footer-icons .github {
+    position: absolute;
+    bottom: 1.8vh;
+    right: 22vw;
+    color: #152E4E;
+    font-family: Montserrat;
+    font-size: 22px;
+    align-items: center;
+    justify-content: center;
+    display: block;
+    cursor: pointer;
+    background-color: #fff;
+    border: none;
+    text-align: center;
+    transition: 0.1s;
+}
+
+.footer .social-footer-icons .email {
+    position: absolute;
+    bottom: 1.8vh;
+    right: 29vw;
+    color: #152E4E;
+    font-family: Montserrat;
+    font-size: 22px;
+    align-items: center;
+    justify-content: center;
+    display: block;
+    cursor: pointer;
+    background-color: #fff;
+    border: none;
+    text-align: center;
+    transition: 0.1s;
+}
+
+
 .footer .madeby {
     position: absolute;
     left: 1vw;
@@ -485,6 +709,88 @@ textarea {
     text-align: center;
     font-family: Montserrat;
     font-size: max(14px, .95vw);
+}
+
+/*-------------------------------
+-----------MOD-FOOTER------------
+-------------------------------*/
+.modfooter .social-footer-icons .insta {
+    position: absolute;
+    right: 7vw;
+    color: #152E4E;
+    font-family: Montserrat;
+    font-size: 22px;
+    align-items: center;
+    justify-content: center;
+    display: block;
+    cursor: pointer;
+    background-color: #fff;
+    border: none;
+    text-align: center;
+    transition: 0.1s;
+    padding-bottom: 1vw;
+}
+
+.modfooter .social-footer-icons .lnkdin {
+    position: absolute;
+    right: 15vw;
+    color: #152E4E;
+    font-family: Montserrat;
+    font-size: 22px;
+    align-items: center;
+    justify-content: center;
+    display: block;
+    cursor: pointer;
+    background-color: #fff;
+    border: none;
+    text-align: center;
+    transition: 0.1s;
+    padding-bottom: 1vw;
+}
+
+.modfooter .social-footer-icons .github {
+    position: absolute;
+    right: 22vw;
+    color: #152E4E;
+    font-family: Montserrat;
+    font-size: 22px;
+    align-items: center;
+    justify-content: center;
+    display: block;
+    cursor: pointer;
+    background-color: #fff;
+    border: none;
+    text-align: center;
+    transition: 0.1s;
+    padding-bottom: 1vw;
+}
+
+.modfooter .social-footer-icons .email {
+    position: absolute;
+    right: 29vw;
+    color: #152E4E;
+    font-family: Montserrat;
+    font-size: 22px;
+    align-items: center;
+    justify-content: center;
+    display: block;
+    cursor: pointer;
+    background-color: #fff;
+    border: none;
+    text-align: center;
+    transition: 0.1s;
+    padding-bottom: 1vw;
+}
+
+.modfooter .madeby {
+    position: absolute;
+    left: 1vw;
+    background-color: #fff;
+    color: #152E4E;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: max(14px, .95vw);
+    padding-bottom: 1vw;
 }
 
 /*-------------------------------
@@ -516,13 +822,6 @@ hr {
     color: #152E4E;
 }
 
-.insta hr {
-    width: 100%;
-    size: 1vh;
-    margin-bottom: 6vh;
-    color: #152E4E;
-    opacity: 0;
-}
 /*-------------------------------
 -----------SCROLLBAR------------
 -------------------------------*/
@@ -542,37 +841,5 @@ hr {
     background-color: #152E4EBF;
     border-radius: 4px;
 }
-
-/* Handle on hover 
-::-webkit-scrollbar-thumb:hover {
-    background: transparent;
-}
-
-::-webkit-scrollbar-track-piece:start {
-    background: transparent;
-}
-
-::-webkit-scrollbar-track-piece:end {
-    background: transparent;
-}
-
-
-.on-scrollbar::-webkit-scrollbar-track {
-  -webkit-box-shadow: none;
-  background-color: transparent;
-}
-
-.on-scrollbar::-webkit-scrollbar {
-  width: 8px;
-  background-color: transparent;
-  overflow-y: overlay;
-}
-
-.on-scrollbar::-webkit-scrollbar-thumb {
-  background-color: #000;
-  z-index: 2;
-}
-*/
-
 
 

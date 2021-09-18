@@ -116,7 +116,7 @@ body {
 .top-nav .home {
     position: absolute;
     top: 1vw;
-    right: 41vw;
+    right: 53.8vw;
     color: #fff;
     font-family: Montserrat;
     font-size: min(13px, 1.35vw);
@@ -132,7 +132,7 @@ body {
 .top-nav .project {
     position: absolute;
     top: 1vw;
-    right: 31.5vw;
+    right: 43.4vw;
     color: #fff;
     font-family: Montserrat;
     font-size: min(13px, 1.35vw);
@@ -148,7 +148,7 @@ body {
 .top-nav .resume {
     position: absolute;
     top: 1vw;
-    right: 22.9vw;
+    right: 34.2vw;
     color: #fff;
     font-family: Montserrat;
     font-size: min(13px, 1.35vw);
@@ -164,7 +164,7 @@ body {
 .top-nav .insta {
     position: absolute;
     top: 1vw;
-    right: 12.5vw;
+    right: 22.7vw;
     color: #fff;
     font-family: Montserrat;
     font-size: min(13px, 1.35vw);
@@ -177,7 +177,23 @@ body {
     z-index: 2;
 }
 
-.top-nav .service {
+.top-nav .about {
+    position: absolute;
+    top: 1vw;
+    right: 14.5vw;
+    color: #fff;
+    font-family: Montserrat;
+    font-size: min(13px, 1.35vw);
+    align-items: center;
+    justify-content: center;
+    display: block;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    z-index: 2;
+}
+
+.top-nav .contact {
     position: absolute;
     top: 1vw;
     right: 4.5vw;
@@ -204,7 +220,7 @@ body {
     font-family: Montserrat;
     text-align: center;
     color: #fff;
-    font-weight: 300;
+    font-weight: 400;
     font-size: max(25px, 3.5vw);
     z-index: 2;
 }
@@ -212,6 +228,27 @@ body {
 .myname .image img {
     filter: brightness(90%);
     object-position: 50% 30%;
+}
+
+.myname .learn-more {
+    position: absolute;
+    bottom: 30vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    font-family: Montserrat;
+    text-align: center;
+    color: #152E4E;
+    font-weight: 300;
+    font-size: max(20px, 1.5vw);
+    align-items: center;
+    justify-content: center;
+    display: block;
+    cursor: pointer;
+    background-color: none;
+    border: none;
+    z-index: 2;
+    text-align: center;
+    transition: 0.1s;
 }
 
 /*-------------------------------
@@ -235,7 +272,7 @@ span {
 -------------------------------*/
 .descMe {
     position: absolute;
-    top: 24.2vw;
+    top: min(25vw, 28vh);
     left: 8%;
     right: 50%;
     font-family: Montserrat;
@@ -272,39 +309,39 @@ span {
     object-position: 50% 25%;
 }
 
-.howdyhack {
+.spacecraft {
     position: absolute;
-    top: min(25vw, 29vh);
+    top: min(24vw, 27vh);
     left: 8%;
     right: 50%;
     font-family: Montserrat;
     color: #fff;
     font-weight: 400;
-    font-size: max(12px, 1.2vw);
+    font-size: max(12px, 1.15vw);
     z-index: 2; 
 }
 
 .tamuhack {
     position: absolute;
-    top: min(62.5vw, 50vh);
+    top: min(58vw, 47vh);
     left: 8%;
     right: 50%;
     font-family: Montserrat;
     color: #fff;
     font-weight: 400;
-    font-size: max(12px, 1.2vw);
+    font-size: max(12px, 1.15vw);
     z-index: 2; 
 }
 
-.spacecraft {
+.howdyhack {
     position: absolute;
-    top: min(105vw, 75vh); 
+    top: min(102vw, 72vh); 
     left: 8%;
     right: 50%;
     font-family: Montserrat;
     color: #fff;
     font-weight: 400;
-    font-size: max(12px, 1.2vw);
+    font-size: max(12px, 1.15vw);
     z-index: 2; 
 }
 
@@ -378,8 +415,8 @@ iframe {
 
 .resume-text {
     position: relative;
-    top: min(23vw, 26vh);
-    width: max(45vw, 20vh);
+    top: min(30vw, 30vh);
+    width: max(35vw, 30vh);
     height: 64vh;
     font-family: Montserrat;
     color: #fff;
